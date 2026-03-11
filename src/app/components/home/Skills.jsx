@@ -24,70 +24,70 @@ import {
   SiDocker,
   SiGithubactions,
   SiCypress,
+  SiGithub,
+  SiNpm,
 } from "react-icons/si";
 import { motion } from "framer-motion";
-import { BrainCogIcon, Sparkles } from "lucide-react";
+import { BrainCogIcon, CreditCard, Webhook, FileText, FileSpreadsheet, Workflow, Bug, Gauge, Code2 } from "lucide-react";
 
 const skillsByCategory = [
-  {
-    title: "Frontend",
-    items: [
-      { icon: <SiReact color="#61dafb" />, label: "React / Native" },
-      { icon: <SiNextdotjs color="white" />, label: "Next.js" },
-      // { icon: <SiAngular color="#dd0031" />, label: "Angular" },
-      // { icon: <SiElectron color="#47848f" />, label: "Electron.js" },
-      { icon: <SiTailwindcss color="#38bdf8" />, label: "Tailwind CSS" },
-      { icon: <SiHtml5 color="#e34f26" />, label: "HTML" },
-      { icon: <SiCss3 color="#1572b6" />, label: "CSS" },
-    ],
-  },
   {
     title: "Backend",
     items: [
       { icon: <SiNodedotjs color="#339933" />, label: "Node.js" },
-      { icon: <SiGraphql color="#e535ab" />, label: "GraphQL" },
-    ],
-  },
-  // {
-  //   title: "AI / ML",
-  //   items: [
-  //     {
-  //       icon: <Sparkles size={20} color="#a78bfa" />,
-  //       label: "LLMs (OpenAI, Claude)",
-  //     },
-  //     {
-  //       icon: <Sparkles size={20} color="#f472b6" />,
-  //       label: "Langchain / Agents",
-  //     },
-  //   ],
-  // },
-  {
-    title: "DevOps & Infra",
-    items: [
-      { icon: <SiAmazon color="#ff9900" />, label: "AWS" },
-      { icon: <SiGooglecloud color="#4285f4" />, label: "GCP" },
-      // { icon: <SiDocker color="#0db7ed" />, label: "Docker" },
-      { icon: <SiGithubactions color="#2088ff" />, label: "GitHub Actions" },
-      { icon: <SiCypress color="#58c4c4" />, label: "CI/CD / Cypress" },
-    ],
-  },
-  {
-    title: "Databases & Tools",
-    items: [
-      { icon: <SiMongodb color="#47a248" />, label: "MongoDB" },
-      { icon: <SiMysql color="#00758f" />, label: "MySQL" },
-      { icon: <SiPostgresql color="#336791" />, label: "PostgreSQL" },
-      { icon: <SiFirebase color="#ffca28" />, label: "Firebase" },
-      { icon: <SiGit color="#f05032" />, label: "Git / GitHub" },
-      { icon: <SiJest color="#c21325" />, label: "Jest / Postman" },
-    ],
-  },
-  {
-    title: "Languages",
-    items: [
+      { icon: <SiJavascript color="#f7df1e" />, label: "Express.js" },
       { icon: <SiJavascript color="#f7df1e" />, label: "JavaScript" },
       { icon: <SiTypescript color="#3178c6" />, label: "TypeScript" },
-      // { icon: <SiPython color="#3776ab" />, label: "Python" },
+    ],
+  },
+  {
+    title: "Frontend",
+    items: [
+      { icon: <SiReact color="#61dafb" />, label: "React.js" },
+      { icon: <SiAngular color="#dd0031" />, label: "Angular" },
+      { icon: <SiHtml5 color="#e34f26" />, label: "HTML5" },
+      { icon: <SiCss3 color="#1572b6" />, label: "CSS3" },
+      { icon: <SiTailwindcss color="#38bdf8" />, label: "Bootstrap" },
+    ],
+  },
+  {
+    title: "Databases",
+    items: [
+      { icon: <SiPostgresql color="#336791" />, label: "PostgreSQL" },
+      { icon: <SiMongodb color="#47a248" />, label: "MongoDB" },
+      { icon: <SiMysql color="#00758f" />, label: "MySQL" },
+    ],
+  },
+  {
+    title: "Integrations",
+    items: [
+      { icon: <CreditCard size={28} color="#10b981" />, label: "Global Payments API" },
+      { icon: <CreditCard size={28} color="#3b82f6" />, label: "Payment Gateways" },
+      { icon: <Webhook size={28} color="#8b5cf6" />, label: "Webhooks" },
+      { icon: <FileText size={28} color="#ef4444" />, label: "PDF Generation" },
+      { icon: <FileSpreadsheet size={28} color="#22c55e" />, label: "CSV Processing" },
+    ],
+  },
+  {
+    title: "Tools",
+    items: [
+      { icon: <SiGit color="#f05032" />, label: "Git" },
+      { icon: <SiGithub color="#ffffff" />, label: "GitHub" },
+      { icon: <SiJest color="#c21325" />, label: "Postman" },
+      { icon: <SiNpm color="#cb3837" />, label: "npm" },
+      { icon: <Code2 size={28} color="#007acc" />, label: "VS Code" },
+      { icon: <SiGooglecloud color="#4285f4" />, label: "GCP" },
+      { icon: <SiGithubactions color="#2088ff" />, label: "CI/CD" },
+    ],
+  },
+  {
+    title: "Practices",
+    items: [
+      { icon: <Workflow size={28} color="#10b981" />, label: "Agile/Scrum" },
+      { icon: <SiNodedotjs color="#339933" />, label: "REST API Design" },
+      { icon: <Bug size={28} color="#ef4444" />, label: "Debugging" },
+      { icon: <Gauge size={28} color="#f59e0b" />, label: "Performance Tuning" },
+      { icon: <SiJavascript color="#f7df1e" />, label: "MVC Pattern" },
     ],
   },
 ];

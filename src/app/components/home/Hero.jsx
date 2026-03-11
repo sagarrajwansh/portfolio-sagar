@@ -33,15 +33,15 @@ function HomeHero() {
 
       <div className="max-w-3xl w-full z-10">
         <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 text-center leading-tight max-w-3xl mx-auto">
-          Hi, I'm <span className="highlight text-accent">Aftab Alam</span>
+          Hi, I'm <span className="highlight text-accent">Sagar Kumar Paswan</span>
         </h1>
 
         <p className="typing-line text-base md:text-lg text-slate-400 mb-6">
           <Typewriter
             words={[
+              "Node.js Backend Developer",
               "Full Stack Developer",
-              "Mobile App Creator",
-              "AI Integrator",
+              "API Architect",
             ]}
             loop={0}
             cursor
@@ -68,14 +68,14 @@ function HomeHero() {
               {"\n"}
               {"  "}
               <span className="text-blue-400">name</span>:{" "}
-              <span className="text-yellow-300">"Aftab Alam"</span>,{"\n"}
+              <span className="text-yellow-300">"Sagar Kumar Paswan"</span>,{"\n"}
               {"  "}
               <span className="text-blue-400">stack</span>: [
-              <span className="text-yellow-300">"React"</span>,{" "}
               <span className="text-yellow-300">"Node.js"</span>,{" "}
-              <span className="text-yellow-300">"Next.js"</span>,{" "}
-              <span className="text-yellow-300">"React Native"</span>,{" "}
-              <span className="text-yellow-300">"DevOps"</span>]{"\n"}
+              <span className="text-yellow-300">"Express.js"</span>,{" "}
+              <span className="text-yellow-300">"PostgreSQL"</span>,{" "}
+              <span className="text-yellow-300">"React"</span>,{" "}
+              <span className="text-yellow-300">"Angular"</span>]{"\n"}
               {"};"}
             </code>
           </pre>

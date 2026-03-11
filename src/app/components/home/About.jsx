@@ -3,15 +3,15 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { FaReact, FaNodeJs, FaPython, FaUnlockAlt } from "react-icons/fa";
-import { SiNextdotjs, SiMongodb, SiAngular, SiFirebase } from "react-icons/si";
+import { FaReact, FaNodeJs, FaUnlockAlt } from "react-icons/fa";
+import { SiMongodb, SiAngular, SiPostgresql } from "react-icons/si";
 
 function FlippableProfile() {
   const [code, setCode] = useState("");
   const [flipped, setFlipped] = useState(false);
 
   const handleFlip = () => {
-    if (code.trim().toLowerCase() === "ballu & soni") {
+    if (code.trim().toLowerCase() === "sagar") {
       setFlipped((prev) => !prev);
     }
   };
@@ -23,8 +23,8 @@ function FlippableProfile() {
         {/* Front Face */}
         <div className="flip-card-front border-1 border-slate-700 shadow-lg relative">
           <Image
-            src="/personal/profile1.jpg"
-            alt="Aftab Alam"
+            src="/personal/profilepic.png"
+            alt="Sagar Kumar Paswan"
             fill
             className="object-contain rounded-full"
           />
@@ -33,7 +33,7 @@ function FlippableProfile() {
         <div className="flip-card-back">
           <Image
             src="/personal/2.jpg"
-            alt="Ballu & Soni"
+            alt="Sagar"
             fill
             className="object-cover rounded-full"
           />
@@ -125,98 +125,33 @@ export default function About() {
         </motion.h2>
 
         <p className="text-slate-300 max-w-3xl mx-auto">
-          I’m a{" "}
+          I'm a{" "}
           <span className="text-pink-400 font-semibold">
-            full-stack developer
+            Node.js Backend Developer
           </span>{" "}
-          with 3+ years of experience building dynamic apps across mobile and
-          web. My work focuses on performance, usability, and integrating modern
-          tech like LLMs, microservices, and real-time communication.
+          with 3+ years of experience designing and building scalable RESTful APIs, payment
+          integrations, and database-driven applications. Proven track record delivering production-grade systems across pet care management,
+          restaurant POS, CRM, and fintech domains.
         </p>
 
         {/* Tech Icons */}
         <div className="flex justify-center items-center flex-wrap gap-6 text-4xl mt-4">
+          <span className="icon-metal text-[#339933]">
+            <FaNodeJs />
+          </span>
           <span className="icon-metal text-[#61DAFB]">
             <FaReact />
           </span>
-          <span className="icon-metal text-white">
-            <SiNextdotjs />
+          <span className="icon-metal text-[#DD0031]">
+            <SiAngular />
           </span>
-          <span className="icon-metal text-[#339933]">
-            <FaNodeJs />
+          <span className="icon-metal text-[#336791]">
+            <SiPostgresql />
           </span>
           <span className="icon-metal text-[#47A248]">
             <SiMongodb />
           </span>
-          {/* <span className="icon-metal text-[#DD0031]">
-            <SiAngular />
-          </span> */}
-          <span className="icon-metal text-[#FFCA28]">
-            <SiFirebase />
-          </span>
-          {/* <span className="icon-metal text-[#3776AB]">
-            <FaPython />
-          </span> */}
         </div>
-
-        {/*  Work Experience */}
-        {/* <div className="mt-20">
-          <h3 className="text-3xl font-bold text-center text-cyan-400 mb-12">
-             Work Experience
-          </h3>
-
-          <div className="space-y-8 max-w-3xl mx-auto">
-            {[
-              {
-                title: "Full Stack Developer",
-                company: "Jai Infoway Pvt. Ltd.",
-                duration: "Nov 2024 – Present",
-                description:
-                  "As a full stack developer, I led the end-to-end development of web applications, translating product ideas into production-grade features. I collaborated with cross-functional teams to design scalable architecture and deliver performant solutions. Emphasis was placed on enhancing platform security, seamless user onboarding, and robust profile management. I also introduced microservice-style modular APIs to enable flexible business logic deployment.",
-                tech: "Next.js, Node.js, PostgreSQL, Firebase, Google Auth, AWS S3",
-              },
-              {
-                title: "Mobile App Developer",
-                company: "Jai Infoway Pvt. Ltd.",
-                duration: "Nov 2022 – Nov 2024",
-                description:
-                  "Developed cross-platform mobile applications with optimized performance and responsive UIs. Task assignment, reward systems, credit simulation. Braze & Mixpanel integration for campaign management. Push notifications and parental control. In-App purchase integration for Android and IOS. Revamped the entire UI to enhance user experience and make the app more intuitive. Implemented table selection using long press and single tap for multiple use cases, improving order flow efficiency. Simplified the order-to-billing process by streamlining steps, reducing waiter effort and improving speed. Implemented dynamic linking to allow users to open a specific product directly via a shared link. Integrated Google Maps API to visually represent distance between requester and receiver in real-time. Enhanced user experience by enabling seamless navigation and accurate location-based tracking.",
-                tech: "React Native, Node.js, MongoDB, AWS, GCP, AppleConnect, React Navigation, Google Maps API, Firebase Dynamic Links",
-              },
-              {
-                title: "Test Automation Engineer",
-                company: "Jai Infoway Pvt. Ltd.",
-                duration: "May 2021 – Nov 22",
-                description:
-                  "Created and executed test cases to validate core trading features and user workflows. Automated end-to-end tests using Cypress to ensure consistent performance across releases. Performed regression and integration testing to identify and log defects early in the development cycle.",
-                tech: "Cypress, JavaScript, Chrome DevTools, Postman, JIRA",
-              },
-            ].map((job, index) => (
-              <div
-                key={index}
-                className="bg-slate-800 text-white rounded-xl p-6 shadow-lg hover:shadow-cyan-400/30 transition-all"
-              >
-                <h4 className="text-lg font-semibold">
-                  {job.title}
-                  {job.company && (
-                    <>
-                      {" "}
-                      —{" "}
-                      <span className="text-cyan-300 font-medium">
-                        {job.company}
-                      </span>
-                    </>
-                  )}
-                </h4>
-                <p className="text-sm text-slate-400 mb-2">{job.duration}</p>
-                <p className="text-sm text-slate-300">{job.description}</p>
-                <p className="text-sm text-slate-400 mt-3">
-                  <strong className="text-white">Tech:</strong> {job.tech}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div> */}
 
         <div className="relative mt-20 border-l-2 border-white pl-8 space-y-16">
           {/* Work Experience Header */}
@@ -224,173 +159,164 @@ export default function About() {
             🔧 Work Experience
           </h4>
 
-          {/* Full Stack Developer */}
+          {/* Full Stack Developer - Petlinx */}
           <div className="relative">
             <div className="absolute -left-[1.15rem] top-1 w-4 h-4 bg-white rounded-full border-2 border-white"></div>
-            <h5 className="text-xl font-bold mb-2">🧠 Full Stack Developer — Jai Infoway Pvt. Ltd.</h5>
-            <p className="text-sm text-gray-500 mb-4">Nov 2024 – Present</p>
+            <h5 className="text-xl font-bold mb-2">💻 Full Stack Developer — JaiInfoway Pvt Ltd, Ranchi</h5>
+            <p className="text-sm text-gray-500 mb-2">Jan 2024 – Present</p>
+            <p className="text-sm text-pink-400 mb-4">Petlinx – Pet Care Management Platform</p>
             <p className="text-gray-300">
-              As a full stack developer, I led the end-to-end development of web applications, translating product ideas into production-grade features.
-              I collaborated with cross-functional teams to design scalable architecture and deliver performant solutions. Emphasis was placed on enhancing platform security, seamless user onboarding, and robust profile management. I also introduced microservice-style modular APIs to enable flexible business logic deployment.
+              Architected and delivered RESTful APIs for invoicing, payment processing, and transaction workflows. Integrated Global Payments gateway for both online and card-present device transactions.
             </p>
 
-            <p className="flex mt-5 items-start text-xl">Key Highlights :</p>
+            <p className="flex mt-5 items-start text-xl">Key Highlights:</p>
 
             <ul className="space-y-2 mt-4 pl-6">
               <li className="flex items-start">
                 <span className="mt-1 mr-3 text-cyan-400">•</span>
                 <span className="text-gray-300 leading-relaxed">
-                  Implemented a comprehensive appointment log system to track every change including payments, refunds, date updates, and run modifications.
+                  Architected RESTful APIs serving 1,000+ active records in PostgreSQL
                 </span>
               </li>
               <li className="flex items-start">
                 <span className="mt-1 mr-3 text-cyan-400">•</span>
                 <span className="text-gray-300 leading-relaxed">
-                  Developed Google authentication and email verification during user signup for secure access.
+                  Integrated Global Payments gateway reducing payment errors by standardizing checkout logic
                 </span>
               </li>
               <li className="flex items-start">
                 <span className="mt-1 mr-3 text-cyan-400">•</span>
                 <span className="text-gray-300 leading-relaxed">
-                  Built profile upload features for clients and pets, including image cropping and storage in AWS S3 buckets.
+                  Engineered dynamic pricing engine cutting manual billing effort by ~40%
                 </span>
               </li>
               <li className="flex items-start">
                 <span className="mt-1 mr-3 text-cyan-400">•</span>
                 <span className="text-gray-300 leading-relaxed">
-                  Added employee onboarding flow with invite-based signup and password reset functionality.
+                  Built modular React UI components improving data entry speed and UX consistency
                 </span>
               </li>
               <li className="flex items-start">
                 <span className="mt-1 mr-3 text-cyan-400">•</span>
                 <span className="text-gray-300 leading-relaxed">
-                  Resolved various UI and backend bugs to improve overall stability and user experience.
+                  Optimized complex PostgreSQL queries improving average response time
                 </span>
               </li>
             </ul>
 
             <p className="text-m text-cyan-400 font-mono mt-5">
-              Stack: [Next.js, Node.js, PostgreSQL, Firebase, Google Auth, AWS S3]
+              Stack: [Node.js, Next.js, PostgreSQL, Global Payments API]
             </p>
           </div>
 
-          {/* Mobile App Developer */}
+          {/* Full Stack Developer - Sales CRM */}
           <div className="relative">
             <div className="absolute -left-[1.15rem] top-1 w-4 h-4 bg-white rounded-full border-2 border-white"></div>
-            <h5 className="text-xl font-bold mb-2">📱 Mobile App Developer — Jai Infoway Pvt. Ltd.</h5>
-            <p className="text-sm text-gray-500 mb-4">Nov 2022 – Nov 2024</p>
+            <h5 className="text-xl font-bold mb-2">💼 Full Stack Developer — JaiInfoway Pvt Ltd, Ranchi</h5>
+            <p className="text-sm text-gray-500 mb-2">Jan 2024</p>
+            <p className="text-sm text-pink-400 mb-4">Sales CRM Tool</p>
             <p className="text-gray-300">
-              Worked on feature-rich mobile apps that required precision UI/UX and platform-specific optimization. I contributed significantly to feature delivery, app reusability, and post-launch iteration based on analytics and user feedback. I also maintained app store compliance and implemented parental controls and in-app purchases for monetization.
+              Developed user authentication, role-based access control, and LinkedIn profile management modules with automated prospect import pipeline.
             </p>
-              <p className="flex mt-5 items-start text-xl">Key Highlights :</p>
+              <p className="flex mt-5 items-start text-xl">Key Highlights:</p>
             <ul className="space-y-2 mt-4 pl-6">
               <li className="flex items-start">
                 <span className="mt-1 mr-3 text-cyan-400">•</span>
                 <span className="text-gray-300 leading-relaxed">
-                  Delivered high-performance apps with features like reward tracking, dynamic linking, and interactive billing flows.
+                  Built automated prospect import pipeline with CSV parsing and LinkedIn chat ingestion
                 </span>
               </li>
               <li className="flex items-start">
                 <span className="mt-1 mr-3 text-cyan-400">•</span>
                 <span className="text-gray-300 leading-relaxed">
-                  Integrated third-party SDKs like Braze, Mixpanel, and Google Maps.
-                </span>
-              </li>
-              <li className="flex items-start">
-                <span className="mt-1 mr-3 text-cyan-400">•</span>
-                <span className="text-gray-300 leading-relaxed">
-                  Improved user acquisition with deep linking and push campaigns.
+                  Created Reports Wizard with advanced filtering and analytics dashboards
                 </span>
               </li>
             </ul>
 
             <p className="text-sm text-cyan-400 font-mono mt-5">
-              Stack: [React Native, Node.js, MongoDB, AWS, GCP, AppleConnect, Firebase Dynamic Links]
+              Stack: [Node.js, React, PostgreSQL]
             </p>
           </div>
 
-          {/* Test Automation Engineer */}
+          {/* Full Stack Developer - IntelliBook */}
           <div className="relative">
             <div className="absolute -left-[1.15rem] top-1 w-4 h-4 bg-white rounded-full border-2 border-white"></div>
-            <h5 className="text-xl font-bold mb-2">🧪 Test Automation Engineer — Jai Infoway Pvt. Ltd.</h5>
-            <p className="text-sm text-gray-500 mb-4">May 2021 – Nov 2022</p>
+            <h5 className="text-xl font-bold mb-2">🍽️ Full Stack Developer — JaiInfoway Pvt Ltd, Ranchi</h5>
+            <p className="text-sm text-gray-500 mb-2">Nov 2022 – Jan 2024</p>
+            <p className="text-sm text-pink-400 mb-4">IntelliBook – Restaurant POS System</p>
             <p className="text-gray-300">
-              I started my journey with a strong foundation in QA and automation. My role involved creating automation pipelines to support stable feature releases. I ensured consistent application behavior using integration tests and closely collaborated with devs to enforce test-driven development.
+              Developed backend APIs and Angular frontend for a multi-module POS platform handling order management and kitchen workflows with QR-code-based digital menu.
             </p>
-              <p className="flex mt-5 items-start text-xl">Key Highlights :</p>
+              <p className="flex mt-5 items-start text-xl">Key Highlights:</p>
             <ul className="space-y-2 mt-4 pl-6">
               <li className="flex items-start">
                 <span className="mt-1 mr-3 text-cyan-400">•</span>
                 <span className="text-gray-300 leading-relaxed">
-                  Built Cypress test suites integrated into CI/CD.
+                  Implemented QR-code-based digital menu with real-time order placement
                 </span>
               </li>
               <li className="flex items-start">
                 <span className="mt-1 mr-3 text-cyan-400">•</span>
                 <span className="text-gray-300 leading-relaxed">
-                  Proactively logged regressions and collaborated in sprint retros for improved test coverage.
+                  Integrated RazorPay for online payment processing
                 </span>
               </li>
               <li className="flex items-start">
                 <span className="mt-1 mr-3 text-cyan-400">•</span>
                 <span className="text-gray-300 leading-relaxed">
-                  Acted as QA lead during staging for finance and trading features.
+                  Optimized Angular UI rendering improving customer-facing load performance
+                </span>
+              </li>
+              <li className="flex items-start">
+                <span className="mt-1 mr-3 text-cyan-400">•</span>
+                <span className="text-gray-300 leading-relaxed">
+                  Built concurrent order tracking across multiple tables
                 </span>
               </li>
             </ul>
 
             <p className="text-sm text-cyan-400 font-mono mt-5">
-              Stack: [Cypress, JavaScript, JIRA, Postman, Chrome DevTools]
+              Stack: [Node.js, Angular, MySQL, RazorPay]
+            </p>
+          </div>
+
+          {/* Junior Backend Developer */}
+          <div className="relative">
+            <div className="absolute -left-[1.15rem] top-1 w-4 h-4 bg-white rounded-full border-2 border-white"></div>
+            <h5 className="text-xl font-bold mb-2">🚀 Junior Backend Developer — UTS Digitization Pvt Ltd, Remote</h5>
+            <p className="text-sm text-gray-500 mb-2">Apr 2022 – Oct 2022</p>
+            <p className="text-sm text-pink-400 mb-4">Global Crypto News Platform</p>
+            <p className="text-gray-300">
+              Built end-to-end crypto news aggregation platform with Angular frontend and Node.js backend. Implemented data ingestion pipelines and content validation.
+            </p>
+              <p className="flex mt-5 items-start text-xl">Key Highlights:</p>
+            <ul className="space-y-2 mt-4 pl-6">
+              <li className="flex items-start">
+                <span className="mt-1 mr-3 text-cyan-400">•</span>
+                <span className="text-gray-300 leading-relaxed">
+                  Implemented JSON data ingestion pipeline with categorization logic for high-volume news feeds
+                </span>
+              </li>
+              <li className="flex items-start">
+                <span className="mt-1 mr-3 text-cyan-400">•</span>
+                <span className="text-gray-300 leading-relaxed">
+                  Added server-side PDF validation ensuring content quality standards
+                </span>
+              </li>
+              <li className="flex items-start">
+                <span className="mt-1 mr-3 text-cyan-400">•</span>
+                <span className="text-gray-300 leading-relaxed">
+                  Designed daily randomized category ordering to improve user engagement
+                </span>
+              </li>
+            </ul>
+
+            <p className="text-sm text-cyan-400 font-mono mt-5">
+              Stack: [Node.js, Angular, MongoDB]
             </p>
           </div>
         </div>
-
-
-
-        {/* Notable Projects */}
-        {/* <div className="mt-16 text-left">
-          <h3 className="text-xl font-bold text-pink-400 mb-4">
-            Notable Projects
-          </h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-[#1e293b] p-4 rounded-lg shadow-md border border-[#334155] hover:shadow-cyan-500/10 transition">
-              <h5 className="text-lg font-semibold text-white">AutoFlow</h5>
-              <p className="text-sm text-slate-300 mt-1">
-                Sales automation platform with multi-source data extraction and
-                marketing workflows.
-              </p>
-              <span className="text-xs text-cyan-400 mt-2 block">
-                Next.js • Apollo • TypeScript
-              </span>
-            </div>
-
-            <div className="bg-[#1e293b] p-4 rounded-lg shadow-md border border-[#334155] hover:shadow-cyan-500/10 transition">
-              <h5 className="text-lg font-semibold text-white">
-                Earnings Call
-              </h5>
-              <p className="text-sm text-slate-300 mt-1">
-                AI-powered financial analysis platform with LLM integration and
-                voice assistant.
-              </p>
-              <span className="text-xs text-cyan-400 mt-2 block">
-                Next.js • AWS • AI Agents
-              </span>
-            </div>
-
-            <div className="bg-[#1e293b] p-4 rounded-lg shadow-md border border-[#334155] hover:shadow-cyan-500/10 transition">
-              <h5 className="text-lg font-semibold text-white">
-                OFLEP Connect
-              </h5>
-              <p className="text-sm text-slate-300 mt-1">
-                WebRTC video conferencing with screen sharing and real-time host
-                controls.
-              </p>
-              <span className="text-xs text-cyan-400 mt-2 block">
-                React Native • WebRTC • Socket.io
-              </span>
-            </div>
-          </div>
-        </div> */}
       </div>
     </section>
   );

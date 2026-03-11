@@ -9,7 +9,7 @@ export default function ResumeButton() {
     return (
       <div className="fixed top-4 right-0 z-[51] flex flex-col items-center group">
         <motion.a
-          href="/aftab-resume.pdf"
+          href="/Sagar_Kumar_Paswan_NodeJS.pdf"
           download
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.95 }}

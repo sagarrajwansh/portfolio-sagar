@@ -7,18 +7,18 @@ export default function Contact() {
   const contactItems = [
     {
       icon: <FaEnvelope size={20} />,
-      text: "aftab8143@gmail.com",
-      href: "mailto:aftab8143@gmail.com",
+      text: "kumarsagarpaswan@gmail.com",
+      href: "mailto:kumarsagarpaswan@gmail.com",
     },
     {
       icon: <FaGithub size={20} />,
-      text: "Aftab8143",
-      href: "https://github.com/aftab8143",
+      text: "SagarKPaswan",
+      href: "https://github.com/SagarKPaswan",
     },
     {
       icon: <FaLinkedin size={20} />,
-      text: "Aftab Alam",
-      href: "https://www.linkedin.com/in/aftab8143/",
+      text: "Sagar Kumar Paswan",
+      href: "https://linkedin.com/in/sagar-kumar-paswan",
     },
   ];
 

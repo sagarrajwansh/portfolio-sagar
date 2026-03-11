@@ -31,7 +31,7 @@ export default function ProjectCard({
   }, [hovered, images, liveComponent]);
 
   const imageToShow =
-    hovered && images.length > 0 ? images[currentImageIndex] : displayImage;
+    hovered && images.length > 0 ? images[currentImageIndex] : (displayImage || "/images/default-project.png");
 
   return (
     <Link href={`/projects/${slug}`}>

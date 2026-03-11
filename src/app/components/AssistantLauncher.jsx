@@ -66,7 +66,7 @@ export default function AssistantLauncher() {
           whileTap={{ scale: 0.95 }}
           className="cursor-pointer relative"
         >
-          <ChatBotIcon />
+          {/* <ChatBotIcon /> */}
         </motion.div>
       </motion.div>
 
