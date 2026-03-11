@@ -30,14 +30,14 @@ function FlippableProfile() {
           />
         </div>
         {/* Back Face */}
-        <div className="flip-card-back">
+        {/* <div className="flip-card-back">
           <Image
             src="/personal/2.jpg"
             alt="Sagar"
             fill
             className="object-cover rounded-full"
           />
-        </div>
+        </div> */}
       </div>
 
       {/* 👇 Input & Button - visible only on hover */}

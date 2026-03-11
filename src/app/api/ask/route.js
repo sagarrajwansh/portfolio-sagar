@@ -8,16 +8,16 @@ const openai = new OpenAI({
   apiKey: 'abncddc',
 });
 
-// Structured data about Aftab, his portfolio, and personal details
+// Structured data about Sagar, his portfolio, and personal details
 const contentMap = {
-  Aftab: {
-    name: "Aftab Alam",
+  Sagar: {
+    name: "Sagar Kumar Paswan",
     title: "Full-Stack Developer",
     contact: {
-      email: "aftab8143@gmail.com",
+      email: "Sagar8143@gmail.com",
       phone: "+919955327833",
-      linkedin: "https://www.linkedin.com/in/aftab8143/",
-      github: "https://github.com/aftab8143",
+      linkedin: "https://www.linkedin.com/in/Sagar8143/",
+      github: "https://github.com/Sagar8143",
     },
     summary:
       "Dedicated full-stack web and mobile application developer with hands-on experience in building scalable, high-quality solutions for Android and iOS platforms. Passionate about modern full-stack technologies, mobile development, and delivering user-centric applications.",
@@ -140,9 +140,9 @@ const contentMap = {
   },
 
   website: {
-    name: "Aftab's Portfolio Website",
+    name: "Sagar's Portfolio Website",
     description:
-      "A personal portfolio website for Aftab Alam, showcasing his projects, experience, and skills as a full-stack developer.",
+      "A personal portfolio website for Sagar Kumar Paswan, showcasing his projects, experience, and skills as a full-stack developer.",
     techStack: ["Next.js", "React", "Tailwind CSS", "Node.js", "MongoDB"],
     features: [
       "Project gallery with details, links, and screenshots",
@@ -154,8 +154,8 @@ const contentMap = {
 
     pages: {
       home: "The homepage features a hero section, skills, about, and contact sections.",
-      blogs: "A blog section where Aftab shares articles and insights.",
-      projects: "A gallery of Aftab's projects with details and links.",
+      blogs: "A blog section where Sagar shares articles and insights.",
+      projects: "A gallery of Sagar's projects with details and links.",
       demo: "UI demos showcasing artistic designs and layouts.",
     },
   },
@@ -178,8 +178,8 @@ const contentMap = {
 // Helper: Build system instruction guiding assistant tone & content
 function buildSystemInstruction(includePersonal = false) {
   let base =
-    `You are Aftab Alam's personal assistant, EVA (Aftab's Intelligent Virtual Assistant). ` +
-    `You have access to JSON data blocks labeled 'Aftab', 'website', and 'personal'. ` +
+    `You are Sagar Kumar Paswan's personal assistant, EVA (Sagar's Intelligent Virtual Assistant). ` +
+    `You have access to JSON data blocks labeled 'Sagar', 'website', and 'personal'. ` +
     `When answering, decide which block(s) are relevant to the user's question and use only that information. ` +
     `Do not mention irrelevant data. Respond naturally as if you know him.`;
   // if (includePersonal) {

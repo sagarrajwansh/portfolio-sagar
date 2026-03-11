@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Aftab Alam | Portfolio",
-  description: "Portfolio website of Aftab Alam",
+  title: "sagar kumar paswan",
+  description: "Portfolio website of Sagar Kumar Paswan",
 };
 
 export default function RootLayout({ children }) {

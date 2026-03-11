@@ -15,7 +15,7 @@ export default function LoginModal({ onClose, onSuccess }) {
       setError("Please fill all fields.");
     } else if (!email.includes("@")) {
       setError("Invalid email format.");
-    } else if (email === "aftab8143@gmail.com" && password === "123") {
+    } else if (email === "Sagar8143@gmail.com" && password === "123") {
       localStorage.setItem("isLoggedIn", "true");
       onSuccess();
     } else {

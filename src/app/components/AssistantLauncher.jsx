@@ -37,7 +37,7 @@ export default function AssistantLauncher() {
     className="relative bg-black text-white text-sm rounded px-3 py-2 shadow-lg max-w-xs"
   >
     Ask EVA anything<br />
-    about Aftab’s portfolio
+    about Sagar’s portfolio
 
     {/* Arrow pointing to icon */}
     <div

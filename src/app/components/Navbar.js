@@ -53,7 +53,7 @@ export default function Navbar() {
       >
         {/* Logo or Name */}
         {/* <Link href="/" className="text-cyan-400 font-bold text-lg">
-          Aftab
+          Sagar
         </Link> */}
 
         {/* Mobile Menu Button */}
