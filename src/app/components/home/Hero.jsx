@@ -1,10 +1,95 @@
 "use client";
 
 import { Typewriter } from "react-simple-typewriter";
-import { Rocket } from "lucide-react";
+import { Rocket, Download } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import { FaUnlockAlt } from "react-icons/fa";
+
+function FlippableProfile() {
+  const [code, setCode] = useState("");
+  const [flipped, setFlipped] = useState(false);
+
+  // const handleFlip = () => {
+  //   if (code.trim().toLowerCase() === "sagar") {
+  //     setFlipped((prev) => !prev);
+  //   }
+  // };
+
+  return (
+    <div className="relative w-40 h-40 perspective mx-auto mb-10 group">
+      {/* Card Inner */}
+      <div className={`flip-card-inner ${flipped ? "flipped" : ""}`}>
+        {/* Front Face */}
+        <div className="flip-card-front border-1 border-slate-700 shadow-lg relative">
+          <Image
+            src="/personal/profilepic.png"
+            alt="Sagar Kumar Paswan"
+            fill
+            className="object-contain rounded-full"
+          />
+        </div>
+      </div>
+
+      {/* Input & Button - visible only on hover */}
+      {/* <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition duration-300">
+        <div className="flex items-center gap-2 bg-slate-800 px-2 py-1 rounded-md shadow-lg">
+          <input
+            type="text"
+            placeholder="Secret code"
+            value={code}
+            onChange={(e) => setCode(e.target.value)}
+            className="px-2 py-1 rounded-md text-xs text-white bg-slate-700 w-28"
+          />
+          <button
+            onClick={handleFlip}
+            className="text-white bg-pink-500 p-2 rounded-full hover:bg-pink-600"
+          >
+            <FaUnlockAlt size={14} />
+          </button>
+        </div>
+      </div> */}
+
+      {/* Flip CSS */}
+      <style jsx>{`
+        .perspective {
+          perspective: 1000px;
+        }
+        .flip-card-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          transition: transform 0.8s ease-in-out;
+          transform-style: preserve-3d;
+        }
+        .flipped {
+          transform: rotateY(180deg);
+        }
+        .flip-card-front,
+        .flip-card-back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          backface-visibility: hidden;
+          border-radius: 9999px;
+          overflow: hidden;
+          top: 0;
+          left: 0;
+        }
+        .flip-card-front {
+          z-index: 2;
+          transform: rotateY(0deg);
+        }
+        .flip-card-back {
+          transform: rotateY(180deg);
+          z-index: 1;
+        }
+      `}</style>
+    </div>
+  );
+}
 
 function HomeHero() {
   const [launching, setLaunching] = useState(false);
@@ -14,24 +99,34 @@ function HomeHero() {
     setLaunching(true);
     setTimeout(() => {
       router.push("/projects?land=true");
-    }, 1500); // matches animation duration
+    }, 1500);
   };
 
   return (
-    <section className="hero min-h-[90vh] relative overflow-hidden flex items-center justify-center px-4 md:px-8 text-center bg-gradient-to-br from-[#0f172a] to-[#1e293b]">
-      {/* 💫 Background blobs for visual depth */}
+    <section className="hero min-h-[90vh] relative overflow-hidden flex items-center justify-center px-4 md:px-8 text-center bg-gradient-to-br from-[#0F111A] to-[#1a1d2e]">
+      {/* Background blobs for visual depth */}
       <motion.div
-        className="absolute top-[-100px] left-[-100px] w-[300px] h-[300px] bg-cyan-500 rounded-full opacity-30 blur-3xl z-0"
+        className="absolute top-[-100px] left-[-100px] w-[300px] h-[300px] bg-indigo-500 rounded-full opacity-20 blur-3xl z-0"
         animate={{ x: 80, y: 80, scale: [1, 1.2, 1] }}
         transition={{ duration: 10, repeat: Infinity, repeatType: "mirror" }}
       />
       <motion.div
-        className="absolute bottom-[-100px] right-[-100px] w-[350px] h-[350px] bg-pink-500 rounded-full opacity-25 blur-3xl z-0"
+        className="absolute bottom-[-100px] right-[-100px] w-[350px] h-[350px] bg-rose-500 rounded-full opacity-15 blur-3xl z-0"
         animate={{ x: -60, y: -60, scale: [1, 1.1, 1] }}
         transition={{ duration: 12, repeat: Infinity, repeatType: "mirror" }}
       />
 
       <div className="max-w-3xl w-full z-10">
+        {/* Profile Picture */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          className="mb-8"
+        >
+          <FlippableProfile />
+        </motion.div>
+
         <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 text-center leading-tight max-w-3xl mx-auto">
           Hi, I'm <span className="highlight text-accent">Sagar Kumar Paswan</span>
         </h1>
@@ -52,7 +147,7 @@ function HomeHero() {
           />
         </p>
 
-        {/* 💻 Fake Code Block */}
+        {/* Fake Code Block */}
         <motion.div
           className="w-full overflow-x-auto px-4 md:px-6"
           initial={{ opacity: 0, y: 20 }}
@@ -81,7 +176,7 @@ function HomeHero() {
           </pre>
         </motion.div>
 
-        {/* 🚀 Rocket Launch with Thrust and Smoke */}
+        {/* Rocket Launch with Thrust and Smoke */}
         <motion.div
           className="my-6 flex justify-center relative h-16"
           animate={
@@ -96,13 +191,13 @@ function HomeHero() {
           }}
         >
           <div className="relative">
-            {/* 🚀 Rocket */}
+            {/* Rocket */}
             <Rocket
               size={36}
               className="text-white drop-shadow-[0_0_8px_rgba(0,247,255,0.5)]"
             />
 
-            {/* 🔥 Thrust Flames */}
+            {/* Thrust Flames */}
             {launching && (
               <>
                 <motion.div
@@ -118,7 +213,7 @@ function HomeHero() {
               </>
             )}
 
-            {/* 💨 Smoke Trail */}
+            {/* Smoke Trail */}
             {launching && (
               <div className="absolute bottom-[-4px] left-1/2 -translate-x-1/2">
                 {[...Array(4)].map((_, i) => (
@@ -144,15 +239,23 @@ function HomeHero() {
           </div>
         </motion.div>
 
-        <div className="flex justify-center mt-6">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6">
           <button
             onClick={handleLaunch}
             disabled={launching}
-            className="hero-btn bg-accent text-[#0f172a] px-6 py-2 rounded-full font-bold shadow hover:bg-blue-500 transition duration-300 flex items-center gap-2"
+            className="hero-btn bg-accent text-white px-6 py-2 rounded-full font-bold shadow hover:bg-blue-600 transition duration-300 flex items-center gap-2"
           >
             <Rocket className="w-5 h-5" />
             View My Work
           </button>
+          <a
+            href="/Sagar_Kumar_Paswan_NodeJS.pdf"
+            download
+            className="hero-btn bg-rose-600 text-white px-6 py-2 rounded-full font-bold shadow hover:bg-rose-700 transition duration-300 flex items-center gap-2"
+          >
+            <Download className="w-5 h-5" />
+            Resume
+          </a>
         </div>
       </div>
     </section>

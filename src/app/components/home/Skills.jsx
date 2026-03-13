@@ -29,8 +29,13 @@ import {
 } from "react-icons/si";
 import { motion } from "framer-motion";
 import { BrainCogIcon, CreditCard, Webhook, FileText, FileSpreadsheet, Workflow, Bug, Gauge, Code2 } from "lucide-react";
+import { useContext } from "react";
+import { ThemeContext } from "@/context/ThemeContext";
 
-const skillsByCategory = [
+function Skills() {
+  const { theme } = useContext(ThemeContext);
+  
+  const skillsByCategory = [
   {
     title: "Backend",
     items: [
@@ -72,7 +77,7 @@ const skillsByCategory = [
     title: "Tools",
     items: [
       { icon: <SiGit color="#f05032" />, label: "Git" },
-      { icon: <SiGithub color="#ffffff" />, label: "GitHub" },
+      { icon: <SiGithub color={theme === "light" ? "#1a1d2e" : "#ffffff"} />, label: "GitHub" },
       { icon: <SiJest color="#c21325" />, label: "Postman" },
       { icon: <SiNpm color="#cb3837" />, label: "npm" },
       { icon: <Code2 size={28} color="#007acc" />, label: "VS Code" },
@@ -91,8 +96,6 @@ const skillsByCategory = [
     ],
   },
 ];
-
-function Skills() {
   return (
     <section className="relative z-10 py-16 sm:py-24 px-4 sm:px-6 text-white overflow-hidden">
       {/* Floating Blobs */}
@@ -121,7 +124,7 @@ function Skills() {
             viewport={{ once: true }}
             transition={{ delay: i * 0.1, duration: 0.6 }}
           >
-            <h3 className="text-lg font-semibold text-pink-400 mb-4 text-center">
+            <h3 className="text-lg font-semibold  mb-4 text-center">
               {category.title}
             </h3>
             <div className="flex flex-wrap gap-4 align-center justify-center">

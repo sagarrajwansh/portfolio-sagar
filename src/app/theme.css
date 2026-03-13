@@ -1,0 +1,156 @@
+/* Light Theme Styles */
+body[data-theme="light"] {
+  --bg-dark: #ffffff;
+  --text-light: #1a1d2e;
+  --accent: #4F46E5;
+  --btn-hover: #2563EB;
+}
+
+body[data-theme="light"] .hero {
+  background: linear-gradient(135deg, #f8fafc 40%, #e2e8f0);
+}
+
+body[data-theme="light"] .hero h1,
+body[data-theme="light"] .about-title,
+body[data-theme="light"] .timeline-title,
+body[data-theme="light"] .page-title,
+body[data-theme="light"] .section-title,
+body[data-theme="light"] h2,
+body[data-theme="light"] h3,
+body[data-theme="light"] h4,
+body[data-theme="light"] h5,
+body[data-theme="light"] p {
+  color: #1a1d2e !important;
+}
+
+/* Section headings - Work Experience, Featured Projects, Contact Me */
+body[data-theme="light"] section h2,
+body[data-theme="light"] section h4 {
+  color: #1a1d2e !important;
+}
+
+body[data-theme="light"] .work-experience-title,
+body[data-theme="light"] .featured-projects-title,
+body[data-theme="light"] .contact-me-title {
+  color: #1a1d2e !important;
+}
+
+body[data-theme="light"] .text-cyan-400 {
+  color: #1a1d2e !important;
+}
+
+/* Work Experience Section */
+body[data-theme="light"] .border-l-2 {
+  border-color: #1a1d2e;
+}
+
+body[data-theme="light"] .bg-white {
+  background-color: #1a1d2e !important;
+}
+
+body[data-theme="light"] .border-white {
+  border-color: #1a1d2e !important;
+}
+
+body[data-theme="light"] .text-gray-300,
+body[data-theme="light"] .text-gray-500,
+body[data-theme="light"] .text-slate-300,
+body[data-theme="light"] .text-slate-400,
+body[data-theme="light"] .text-white,
+body[data-theme="light"] span {
+  color: #1a1d2e !important;
+}
+
+body[data-theme="light"] .text-cyan-400,
+body[data-theme="light"] .text-pink-400 {
+  color: #4F46E5 !important;
+}
+
+/* Hero Section - Code Block */
+body[data-theme="light"] .bg-\[\#1e293b\] {
+  background: #f1f5f9 !important;
+  border: 1px solid #cbd5e1;
+}
+
+body[data-theme="light"] pre code .text-pink-400 {
+  color: #ec4899 !important;
+}
+
+body[data-theme="light"] pre code .text-blue-400 {
+  color: #3b82f6 !important;
+}
+
+body[data-theme="light"] pre code .text-green-400 {
+  color: #10b981 !important;
+}
+
+body[data-theme="light"] pre code .text-yellow-300 {
+  color: #f59e0b !important;
+}
+
+/* Hero Buttons */
+body[data-theme="light"] .hero-btn {
+  background: #1a1d2e !important;
+  color: #ffffff !important;
+}
+
+body[data-theme="light"] .hero-btn:hover {
+  background: #0f172a !important;
+}
+
+body[data-theme="light"] .bg-accent {
+  background: #1a1d2e !important;
+}
+
+body[data-theme="light"] .bg-rose-600 {
+  background: #1a1d2e !important;
+}
+
+/* Skills Section */
+body[data-theme="light"] .bg-white\/5 {
+  background: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+}
+
+/* GitHub icon color fix for light theme */
+body[data-theme="light"] .text-\[\#ffffff\] {
+  color: #1a1d2e !important;
+}
+
+/* Featured Projects Section */
+body[data-theme="light"] .bg-slate-800,
+body[data-theme="light"] .bg-slate-700,
+body[data-theme="light"] .bg-slate-900 {
+  background: #f1f5f9 !important;
+}
+
+body[data-theme="light"] .bg-slate-700 {
+  background: #e2e8f0 !important;
+}
+
+/* Contact Section */
+body[data-theme="light"] section {
+  background: transparent;
+}
+
+body[data-theme="light"] .bg-gradient-to-br {
+  background: #f8fafc !important;
+}
+
+body[data-theme="light"] .project-card,
+body[data-theme="light"] .skill-group,
+body[data-theme="light"] .skill-icon-box,
+body[data-theme="light"] .skill-category-card,
+body[data-theme="light"] .contact-card {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+body[data-theme="light"] .code-block {
+  background: #f1f5f9;
+  color: #1a1d2e;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

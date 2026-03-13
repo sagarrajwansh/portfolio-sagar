@@ -2,11 +2,11 @@
 
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
-import Navbar from "./Navbar";
 import Footer from "./Footer";
 import ResumeButton from "./ResumeButton";
 import AssistantWrapper from "./AssistantWrapper";
 import BackButton from "./common/BackButton";
+import ThemeToggle from "./ThemeToggle";
 
 export default function LayoutWrapper({ children }) {
   const pathname = usePathname();
@@ -35,12 +35,12 @@ export default function LayoutWrapper({ children }) {
 
   return (
     <>
-      {!isFullScreen && <Navbar />}
       {!isFullScreen && <BackButton label="Back" />}
       {!isFullScreen && <AssistantWrapper />}
       {!isFullScreen && <ResumeButton />}
+      {!isFullScreen && <ThemeToggle />}
       <main
-        className={isFullScreen ? "h-screen w-screen overflow-hidden" : "pt-20"}
+        className={isFullScreen ? "h-screen w-screen overflow-hidden" : ""}
       >
         {children}
       </main>

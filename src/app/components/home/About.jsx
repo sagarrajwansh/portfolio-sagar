@@ -1,118 +1,13 @@
 "use client";
 
-import Image from "next/image";
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { FaReact, FaNodeJs, FaUnlockAlt } from "react-icons/fa";
+import { FaReact, FaNodeJs } from "react-icons/fa";
 import { SiMongodb, SiAngular, SiPostgresql } from "react-icons/si";
-
-function FlippableProfile() {
-  const [code, setCode] = useState("");
-  const [flipped, setFlipped] = useState(false);
-
-  const handleFlip = () => {
-    if (code.trim().toLowerCase() === "sagar") {
-      setFlipped((prev) => !prev);
-    }
-  };
-
-  return (
-    <div className="relative w-40 h-40 perspective mx-auto mb-10 group">
-      {/* Card Inner */}
-      <div className={`flip-card-inner ${flipped ? "flipped" : ""}`}>
-        {/* Front Face */}
-        <div className="flip-card-front border-1 border-slate-700 shadow-lg relative">
-          <Image
-            src="/personal/profilepic.png"
-            alt="Sagar Kumar Paswan"
-            fill
-            className="object-contain rounded-full"
-          />
-        </div>
-        {/* Back Face */}
-        {/* <div className="flip-card-back">
-          <Image
-            src="/personal/2.jpg"
-            alt="Sagar"
-            fill
-            className="object-cover rounded-full"
-          />
-        </div> */}
-      </div>
-
-      {/* 👇 Input & Button - visible only on hover */}
-      <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition duration-300">
-        <div className="flex items-center gap-2 bg-slate-800 px-2 py-1 rounded-md shadow-lg">
-          <input
-            type="text"
-            placeholder="Secret code"
-            value={code}
-            onChange={(e) => setCode(e.target.value)}
-            className="px-2 py-1 rounded-md text-xs text-white bg-slate-700 w-28"
-          />
-          <button
-            onClick={handleFlip}
-            className="text-white bg-pink-500 p-2 rounded-full hover:bg-pink-600"
-          >
-            <FaUnlockAlt size={14} />
-          </button>
-        </div>
-      </div>
-
-      {/* Flip CSS */}
-      <style jsx>{`
-        .perspective {
-          perspective: 1000px;
-        }
-        .flip-card-inner {
-          position: relative;
-          width: 100%;
-          height: 100%;
-          transition: transform 0.8s ease-in-out;
-          transform-style: preserve-3d;
-        }
-        .flipped {
-          transform: rotateY(180deg);
-        }
-        .flip-card-front,
-        .flip-card-back {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          backface-visibility: hidden;
-          border-radius: 9999px;
-          overflow: hidden;
-          top: 0;
-          left: 0;
-        }
-        .flip-card-front {
-          z-index: 2;
-          transform: rotateY(0deg);
-        }
-        .flip-card-back {
-          transform: rotateY(180deg);
-          z-index: 1;
-        }
-      `}</style>
-    </div>
-  );
-}
 
 export default function About() {
   return (
     <section className="bg-transparent py-20 px-6 text-white">
       <div className="max-w-5xl mx-auto text-center">
-        {/* Avatar */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mb-12"
-        >
-          <FlippableProfile />
-        </motion.div>
-
         {/* Headline */}
         <motion.h2
           className="text-3xl font-bold mb-4"
@@ -155,7 +50,7 @@ export default function About() {
 
         <div className="relative mt-20 border-l-2 border-white pl-8 space-y-16">
           {/* Work Experience Header */}
-          <h4 className="text-3xl font-bold text-center text-cyan-400 mb-12">
+          <h4 className="text-3xl font-bold text-center mb-12 work-experience-title">
             🔧 Work Experience
           </h4>
 

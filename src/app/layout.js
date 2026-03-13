@@ -1,6 +1,7 @@
 //app/layout.js
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "./theme.css";
 import { ThemeProvider } from "@/context/ThemeContext";
 import LayoutWrapper from "@/app/components/LayoutWrapper";
 
@@ -22,8 +23,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                const theme = localStorage.getItem('theme') || 'light';
+                document.body.dataset.theme = theme;
+              })();
+            `,
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        data-theme="light"
       >
         <ThemeProvider>
           <LayoutWrapper>{children}</LayoutWrapper>

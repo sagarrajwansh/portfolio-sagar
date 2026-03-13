@@ -3,10 +3,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        accent: "#00f7ff", // 💡 match your :root --accent value
-        "bg-dark": "#0f172a",
-        "text-light": "#f1f5f9",
-        "btn-hover": "#0ea5e9",
+        accent: "#4F46E5",
+        "bg-dark": "#0F111A",
+        "text-light": "#E5E7EB",
+        "btn-hover": "#2563EB",
+        secondary: "#22D3EE",
+        highlight: "#E11D48",
+        success: "#10B981",
       },
 
       animation: {
